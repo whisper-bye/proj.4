@@ -58,5 +58,14 @@ test_script:
   - dir
   - proj.exe -VC
 
-deploy: off
+# deploy: off
 
+version: 1.0.{build}
+build:
+  verbosity: minimal
+artifacts:
+- path: ./
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: fPgJNBEnidH7axpvlLAV6wiSB4gPtrpBegOXP/YyE9LgaBjFsz5XZuuw3XNMeIqM
