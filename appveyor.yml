@@ -45,8 +45,7 @@ build_script:
   - if "%BUILD_TYPE%" == "cmake" cmake --build . --config Release
 
 after_build:
-  - cd C:\projects\proj-4
-  - 7z a include.zip src\*.h
+  - 7z a include.zip %APPVEYOR_BUILD_FOLDER%\src\*.h
 
 test_script:
   - echo test_script
