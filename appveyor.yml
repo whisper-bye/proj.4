@@ -11,12 +11,12 @@ environment:
 #    VS_VERSION: Visual Studio 9 2008
 
 # VS 2010
-  - BUILD_TYPE: cmake
-    VS_VERSION: Visual Studio 10
+#  - BUILD_TYPE: cmake
+#    VS_VERSION: Visual Studio 10
 
 # VS 2012
-  - BUILD_TYPE: cmake
-    VS_VERSION: Visual Studio 11
+#  - BUILD_TYPE: cmake
+#    VS_VERSION: Visual Studio 11
 
 # VS 2013
   - BUILD_TYPE: cmake
