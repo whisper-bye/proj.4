@@ -64,7 +64,7 @@ version: 1.0.{build}
 build:
   verbosity: minimal
 artifacts:
-- path: ./
+- path: bin
 deploy:
 - provider: GitHub
   auth_token:
