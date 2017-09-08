@@ -22,7 +22,7 @@ environment:
   - BUILD_TYPE: cmake
     VS_VERSION: Visual Studio 12
 
-  # - BUILD_TYPE: nmake
+# - BUILD_TYPE: nmake
 
 shallow_clone: true
 
@@ -43,6 +43,10 @@ build_script:
 # warning C4706: assignment within conditional expression
   - if "%BUILD_TYPE%" == "cmake" cmake -G "%VS_FULL%" . -DSELFTEST=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=../bin -DBUILD_LIBPROJ_SHARED=ON -DCMAKE_C_FLAGS="/W4 /wd4706 /WX /D_CRT_SECURE_NO_WARNINGS"
   - if "%BUILD_TYPE%" == "cmake" cmake --build . --config Release
+
+after_build:
+  - cd C:\projects\proj-4
+  - 7z a include.zip src\*.h
 
 test_script:
   - echo test_script
@@ -66,8 +70,7 @@ build:
 artifacts:
 - path: bin
 - path: lib
-- path: src\*.h
-  name: include
+- path: include.zip
 deploy:
 - provider: GitHub
   auth_token:
