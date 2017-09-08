@@ -1,6 +1,6 @@
 platform:
 - x64
-- x86
+# - x86
 
 environment:
   matrix:
@@ -22,7 +22,7 @@ environment:
   - BUILD_TYPE: cmake
     VS_VERSION: Visual Studio 12
 
-  - BUILD_TYPE: nmake
+  # - BUILD_TYPE: nmake
 
 shallow_clone: true
 
