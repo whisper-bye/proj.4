@@ -65,6 +65,7 @@ build:
   verbosity: minimal
 artifacts:
 - path: bin
+- path: lib
 deploy:
 - provider: GitHub
   auth_token:
