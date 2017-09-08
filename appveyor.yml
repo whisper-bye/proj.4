@@ -66,6 +66,8 @@ build:
 artifacts:
 - path: bin
 - path: lib
+- path: src\*.h
+  name: include
 deploy:
 - provider: GitHub
   auth_token:
